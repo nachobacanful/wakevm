@@ -36,6 +36,72 @@ Ideal for homelabs, edge devices, or energy-efficient setups where you want to p
 
 ---
 
+## 🛠 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/nachobacanful/wakevm.git /opt/wakevm
+```
+
+### 2. (Optional) Add to PATH
+
+You can symlink `wakevm.sh` to make it globally executable as `wakevm`:
+
+```bash
+ln -s /opt/wakevm/wakevm.sh /usr/local/bin/wakevm
+```
+
+Now you can run:
+
+```bash
+wakevm --dry-run -e
+```
+
+Otherwise, just use `/opt/wakevm/wakevm.sh` directly.
+
+---
+
+## 🧩 Systemd Service (Optional)
+
+To run `wakevm` as a background service that starts on boot:
+
+### 1. Copy the systemd unit file
+
+```bash
+cp /opt/wakevm/wakevm.service /etc/systemd/system/wakevm.service
+```
+
+### 2. Reload systemd and enable the service
+
+```bash
+systemctl daemon-reload
+systemctl enable wakevm.service
+systemctl start wakevm.service
+```
+
+### 3. Check status and logs
+
+```bash
+systemctl status wakevm.service
+journalctl -u wakevm.service -f
+```
+
+---
+
+### 🔧 Service Behavior
+
+The systemd unit is configured to run:
+
+```bash
+/opt/wakevm/wakevm.sh --tag-only
+```
+
+This ensures that only Proxmox guests tagged with `wol` are eligible for wake-on-LAN by default.  
+**You can edit the `.service` file to disable tag-only mode if needed.**
+
+---
+
 ## ⚙️ Usage
 
 ```bash
