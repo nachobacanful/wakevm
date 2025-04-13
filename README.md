@@ -115,7 +115,7 @@ Use your WOL tool of choice to send a wol packet to the VM/LXC:
 wakeonlan 00:11:22:33:44:55
 ```
 
-You may need to tune your wol tool depending on how your internal network is configured. The Promox host has to listen to an incoming magix packet destined for the mac of a guest. Thisc ould be on any of the host's interfaces/IPs. 
+You may need to tune your wol tool depending on how your internal network is configured. The Promox host has to listen to an incoming magic packet destined for the mac of a guest. Thisc ould be on any of the host's interfaces/IPs. 
 
 
 ### CLI Options
