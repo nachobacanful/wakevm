@@ -105,10 +105,18 @@ This ensures that only Proxmox guests tagged with `wol` are eligible for wake-on
 ---
 
 ## ⚙️ Usage
-
+Run WakeVM in the Proxmox host:
 ```bash
 ./wakevm [options]
 ```
+Use your WOL tool of choice to send a wol packet to the VM/LXC:
+```bash
+# use the mac of a VM or LXC
+wakeonlan 00:11:22:33:44:55
+```
+
+You may need to tune your wol tool depending on how your internal network is configured. The Promox host has to listen to an incoming magix packet destined for the mac of a guest. Thisc ould be on any of the host's interfaces/IPs. 
+
 
 ### CLI Options
 
