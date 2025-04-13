@@ -126,14 +126,14 @@ This ensures that only Proxmox guests tagged with `wol` are eligible for wake-on
 
 Tag filtering lets you define **which VMs or containers are WOL-eligible** — like a simple access control list (ACL):
 
-- By default, the script looks for the tag `wol` in the guest's Proxmox config
+- By default, the script looks for the tag `wol` in the guest's Proxmox config. Apply a tag to the VM/CT in the Proxmox GUI.
 - Use `-e` or `--tag-only` to enable filtering
 - Use `--tag <name>` to override the default tag
 - Tag matching happens **only when a magic packet is received**, so the tag can be changed dynamically at runtime without restarting the script
 
 ### ✅ Example
 
-Start only guests with the `wol` tag:
+Start only guests with the `wol`(default) tag:
 
 ```bash
 ./wakevm --tag-only
@@ -144,6 +144,7 @@ Use a custom tag:
 ```bash
 ./wakevm --tag-only --tag autoservice
 ```
+Then add the tag to the  VM/CT in the Proxmox GUI
 
 If a guest does not have the required tag, you'll see:
 
