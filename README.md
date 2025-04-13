@@ -1,10 +1,10 @@
-# wakevm
+# WakeVM
 
 Wake-on-LAN listener for Proxmox VMs and containers with live tag filtering
 
 ---
 
-`wakevm` is a lightweight Bash-based Wake-on-LAN listener for Proxmox VE. It watches for incoming magic packets on UDP port 9 and boots the corresponding VM or container based on MAC address. Includes live tag-based filtering, dynamic config reloading via `SIGUSR1`, and an optional inotify watcher to auto-refresh the MAC list when VM or LXC configs change.
+`WakeVM` is a lightweight Bash-based Wake-on-LAN listener for Proxmox VE. It watches for incoming magic packets on UDP port 9 and boots the corresponding VM or container based on MAC address. Includes live tag-based filtering, dynamic config reloading via `SIGUSR1`, and an optional inotify watcher to auto-refresh the MAC list when VM or LXC configs change.
 
 It can be run interactively, or deployed as a `systemd` service for always-on functionality.
 
