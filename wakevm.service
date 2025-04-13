@@ -1,0 +1,15 @@
+[Unit]
+Description=Wake-on-LAN listener for Proxmox guests (wakevm)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/wakevm/wakevm.sh --tag-only
+Restart=on-failure
+RestartSec=5
+WorkingDirectory=/opt/wakevm
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
