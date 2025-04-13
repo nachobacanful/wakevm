@@ -235,6 +235,17 @@ Disable the config watcher (only load once):
 
 ---
 
+## 📝 License
+
+This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+
+You are free to use, modify, and redistribute this software — even commercially — as long as:
+- You provide proper attribution to **Ignacio Astaburuaga**
+- Any modifications are also released under the same license (GPLv3)
+- You make the source code available when redistributing
+
+---
+
 ## 🛠 Maintained by
 
 You — the person smart enough to automate their homelab 😎
