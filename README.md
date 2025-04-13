@@ -228,9 +228,9 @@ Disable the config watcher (only load once):
 
 ## ✅ To-Do / Ideas
 
-- ~~[x] `systemd` unit file for auto-start~~
-- ~~[x] Logging to a file or syslog/journald~~
-- ~~[ ] Live `SIGUSR2` to toggle debug mode~~
+- [x] ~~`systemd` unit file for auto-start~~
+- [x] ~~Logging to a file or syslog/journald~~
+- [ ] ~~Live `SIGUSR2` to toggle debug mode~~
 - [ ] Cooldown / rate limiting per guest. Some WOL tools send multiple packets
 - [ ] Webhook or MQTT integration for WOL events
 
