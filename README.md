@@ -50,6 +50,7 @@ You can symlink `wakevm.sh` to make it globally executable as `wakevm`:
 
 ```bash
 ln -s /opt/wakevm/wakevm.sh /usr/local/bin/wakevm
+chmod +x /usr/local/bin/wakevm
 ```
 
 Now you can run:
