@@ -10,6 +10,7 @@ It can be run interactively, or deployed as a `systemd` service for always-on fu
 
 Ideal for homelabs, edge devices, or energy-efficient setups where you want to power up only what's needed — on demand.
 
+Note: This tool will not enable WOL on your guest; it will simply allow your machines to be started by having the host listen for Wake-On-Lan packets destined for the guest and reinterpret them as start commands for guest machines. It is essentially faking WOL. 
 ---
 
 ## 🚀 Features
