@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/9290d751-a37f-45da-92ec-6bead9204f36" width="35%">
+  <img src="https://raw.githubusercontent.com/nachobacanful/wakevm/refs/heads/main/logo/WakeVM-logo.png" width="35%">
   <p>Wake-on-LAN listener for Proxmox VMs and containers with live tag filtering</p>
 
 </div>
